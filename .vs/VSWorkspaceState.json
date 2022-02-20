@@ -10,6 +10,6 @@
     "\\db",
     "\\db\\migrate"
   ],
-  "SelectedNode": "\\app\\views\\articles\\show.html.erb",
+  "SelectedNode": "\\config\\routes.rb",
   "PreviewInSolutionExplorer": false
 }
