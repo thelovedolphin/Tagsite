@@ -1,7 +1,7 @@
-
+<h1>Tagsite</h1>
 <% @websites.each do |website| %>
-<body>
-	<%= website.title %>
-</body>
+<ul>
+	<%= link_to website.title, website %>
+</ul>
 <% end %>
 	

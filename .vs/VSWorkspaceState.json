@@ -2,14 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\app",
+    "\\app\\assets",
+    "\\app\\assets\\stylesheets",
     "\\app\\controllers",
     "\\app\\models",
     "\\app\\views",
-    "\\app\\views\\articles",
-    "\\config",
-    "\\db",
-    "\\db\\migrate"
+    "\\app\\views\\tags",
+    "\\app\\views\\websites",
+    "\\config"
   ],
-  "SelectedNode": "\\db\\schema.rb",
+  "SelectedNode": "\\config\\puma.rb",
   "PreviewInSolutionExplorer": false
 }
