@@ -7,10 +7,9 @@
     "\\app\\controllers",
     "\\app\\models",
     "\\app\\views",
-    "\\app\\views\\tags",
+    "\\app\\views\\articles",
     "\\app\\views\\websites",
     "\\config"
   ],
-  "SelectedNode": "\\config\\puma.rb",
   "PreviewInSolutionExplorer": false
 }

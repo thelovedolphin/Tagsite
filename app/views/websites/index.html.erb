@@ -1,7 +1,10 @@
 <h1>Tagsite</h1>
+
+<%= link_to "New", new_website_path(@website) %>
 <% @websites.each do |website| %>
 <ul>
-	<%= link_to website.title, website %>
+	<%= link_to website.title, "http://#{website.url}" %>
+	<%= link_to "Edit", edit_website_path(website) %>
 </ul>
 <% end %>
 	
