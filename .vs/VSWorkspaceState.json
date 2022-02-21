@@ -7,9 +7,9 @@
     "\\app\\controllers",
     "\\app\\models",
     "\\app\\views",
-    "\\app\\views\\articles",
     "\\app\\views\\websites",
     "\\config"
   ],
+  "SelectedNode": "\\app\\views\\websites\\edit.html.erb",
   "PreviewInSolutionExplorer": false
 }

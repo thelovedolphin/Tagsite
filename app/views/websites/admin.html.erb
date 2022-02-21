@@ -1,20 +1,18 @@
-<h1>Tagsite</h1>
+<h1>Tagsite Admin</h1>
 
-<%= link_to "Admin", "/websites/admin" %>
+<%= link_to "Home", root_path %>
+
+<%= link_to "New", new_website_path %>
 	
-<%= form_with url: "/websites", method: :get do |form| %>
+<%= form_with url: "/websites/admin", method: :get do |form| %>
 <%= form.label :search, "Search for:" %>
 <%= form.text_field :search %>
 <%= form.submit "Search" %>
 <% end %>
 	
-<%= form_with url: "/websites", method: :get do |form| %>
-<%= form.submit "Clear" %>
-<% end %>
-
-	
 <% @websites.each do |website| %>
 <ul>
+	<%= link_to "Edit", edit_website_path(website) %>
 	<%= link_to website.title, "http://#{website.url}" %>
 	<%= website.url %>
 </ul>

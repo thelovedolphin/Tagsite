@@ -1,6 +1,13 @@
 class WebsitesController < ApplicationController
+
+  http_basic_authenticate_with name: "admin", password: "fegiy1-raknef-xempY", except: [:index]
+  
   def index
-	@websites = Website.order('title ASC')
+    @websites = Website.search(params[:search])
+  end
+
+  def admin
+    @websites = Website.search(params[:search])
   end
 
   def new
@@ -35,11 +42,11 @@ class WebsitesController < ApplicationController
     @website = Website.find(params[:id])
     @website.destroy
 
-    redirect_to root_path, status: see_other
+    redirect_to root_path, status: :see_other
   end
 
   private
 	def website_params
-		params.require(:website).permit(:title, :url)
+		params.require(:website).permit(:title, :url, :search)
 	end
 end

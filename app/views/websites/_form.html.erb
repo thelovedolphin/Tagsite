@@ -2,16 +2,17 @@
 
 <%= form_with model: @website do |form| %>
   <div>
-    <%= form.label :title %><br>
+    <%= form.label :title, "Website Name" %><br>
     <%= form.text_field :title %>
   </div>
 
   <div>
-    <%= form.label :url %><br>
+    <%= form.label :url, "URL" %><br>
     <%= form.text_area :url %>
+  </div>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Add Website" %>
   </div>
 <% end %>
