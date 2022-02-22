@@ -1,0 +1,13 @@
+<%= link_to "Home", root_path %>
+<%= link_to "Admin", "/websites/admin" %>
+
+<%= form_with model: @tag do |form| %>
+  <div>
+    <%= form.label :title, "Tag Title" %><br>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.submit "Add Tag" %>
+  </div>
+<% end %>
