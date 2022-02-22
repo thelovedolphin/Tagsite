@@ -7,9 +7,11 @@
     "\\app\\controllers",
     "\\app\\models",
     "\\app\\views",
+    "\\app\\views\\tags",
     "\\app\\views\\websites",
-    "\\config"
+    "\\config",
+    "\\db"
   ],
-  "SelectedNode": "\\app\\views\\websites\\edit.html.erb",
+  "SelectedNode": "\\config\\routes.rb",
   "PreviewInSolutionExplorer": false
 }

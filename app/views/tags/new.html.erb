@@ -1,7 +1,7 @@
 <%= link_to "Home", root_path %>
 <%= link_to "Admin", "/websites/admin" %>
 
-<%= form_with model: @tag do |form| %>
+<%= form_with url: "/tags/new", model: @tag, method: :post do |form| %>
   <div>
     <%= form.label :title, "Tag Title" %><br>
     <%= form.text_field :title %>
@@ -10,4 +10,12 @@
   <div>
     <%= form.submit "Add Tag" %>
   </div>
+<% end %>
+
+<% @tags.each do |tag| %>
+<ul>
+<%= button_to "Delete", @tag, method: :delete %>
+<%= tag.title %>
+</ul>
+	
 <% end %>

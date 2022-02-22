@@ -4,7 +4,7 @@
 
 <%= link_to "New Website", new_website_path %>
 
-<%= link_to "Edit Tags", new_tag_path %>
+<%= link_to "Edit Tags", "/tags/new" %>
 	
 <%= form_with url: "/websites/admin", method: :get do |form| %>
 <%= form.label :search, "Search for:" %>
