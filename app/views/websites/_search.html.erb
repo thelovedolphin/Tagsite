@@ -1,6 +1,6 @@
-<%= form_with url: @path, method: :get do |form| %>
+<%= form_with method: :get do |form| %>
 	<%= form.label :search, "Search for:" %>
 	<%= form.text_field :search %>
 	<%= form.submit "Search" %>
-	<%= form.submit "Clear", name: "reload_admin" %>
+	<%= form.submit "Clear", name: "reload_page" %>
 <% end %>

@@ -1,3 +1,14 @@
+<%= render "links" %>
+
 <%= render "form", website: @website %>
 
-<%= button_to "Delete", @website, method: :delete %>
+<h3>Tags</h3>
+<%= @website_tag_1 %>
+
+<h2>Add Tags</h2>
+<%= render "search" %>
+<% @tags.each do |tag| %>
+<%= link_to tag.title, edit_website_path, add_tag: tag.id %>
+<% end %>
+
+<%= button_to "Delete Website", @website, method: :delete %>

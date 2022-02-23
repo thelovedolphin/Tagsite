@@ -3,7 +3,7 @@ class WebsitesController < ApplicationController
     http_basic_authenticate_with name: "admin", password: "fegiy1-raknef-xempY", except: [:index]
   
     def index
-        if params[:reload_index]
+        if params[:reload_page]
             redirect_to root_path
         else
             @websites = Website.search(params[:search])
@@ -12,15 +12,11 @@ class WebsitesController < ApplicationController
     end
 
     def admin
-        if params[:reload_admin]
+        if params[:reload_page]
             redirect_to website_admin_path
         else
-            @path = website_admin_path
             @websites = Website.search(params[:search])
             @tags = Tag.search(params[:search])
-        end
-        if params[:website_id]
-            redirect_to root_path
         end
     end
 
@@ -40,8 +36,13 @@ class WebsitesController < ApplicationController
     end
 
     def edit
-        @website = Website.find(params[:id])
-        @tags = Tag.search(params[:search])
+        if params[:reload_page]
+            redirect_to edit_website_path
+        else
+            @website = Website.find(params[:id])
+            @website_tag_1 = @website.tags.first
+            @tags = Tag.search(params[:search])
+        end
     end
 
     def update

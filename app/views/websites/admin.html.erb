@@ -13,12 +13,11 @@
 	<%= button_to "Delete", website, method: :delete %>
 	<%= link_to website.title, "http://#{website.url}" %>
 	<%= website.url %>
-
 <% end %>
 
+<br>
+
 <% @tags.each do |tag| %>
-<ul>
 <%= link_to "Edit", edit_tag_path(tag) %>
 <%= tag.title %>
-</ul>
 <% end %>
