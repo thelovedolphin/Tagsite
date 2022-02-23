@@ -1,5 +1,6 @@
-<%= link_to "Home", root_path %>
-<%= link_to "Admin", "/websites/admin" %>
+<%= render "links" %>
+
+<h2>Add Website</h2>
 
 <%= form_with model: @website do |form| %>
   <div>
@@ -10,7 +11,6 @@
   <div>
     <%= form.label :url, "URL" %><br>
     <%= form.text_area :url %>
-  </div>
   </div>
 
   <div>

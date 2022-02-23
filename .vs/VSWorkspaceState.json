@@ -12,6 +12,6 @@
     "\\config",
     "\\db"
   ],
-  "SelectedNode": "\\app\\views\\websites",
+  "SelectedNode": "\\app\\views\\websites\\_form.html.erb",
   "PreviewInSolutionExplorer": false
 }

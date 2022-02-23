@@ -2,15 +2,7 @@
 
 <%= link_to "Admin", "/websites/admin" %>
 	
-<%= form_with url: "/websites", method: :get do |form| %>
-<%= form.label :search, "Search for:" %>
-<%= form.text_field :search %>
-<%= form.submit "Search" %>
-<% end %>
-	
-<%= form_with url: "/websites", method: :get do |form| %>
-<%= form.submit "Clear" %>
-<% end %>
+<%= render "search" %>
 
 	
 <% @websites.each do |website| %>
@@ -20,8 +12,6 @@
 </ul>
 <% end %>
 	
-	<% @tags.each do |tag| %>
-<ul>
-	<%= tag.title %>
-</ul>
+<% @tags.each do |tag| %>
+<%= tag.title %>
 <% end %>

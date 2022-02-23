@@ -1,5 +1,6 @@
 class Website < ApplicationRecord
 
+	has_many :tags
 
 	validates :title, presence: true
 	validates :url, presence: true
@@ -7,7 +8,7 @@ class Website < ApplicationRecord
 	def self.search(search)
 		if search.present?
 			@websites = Website.where("title LIKE (?)", "%#{search}%")
-			else
+		else
 			@websites = Website.all
 		end
 	end
