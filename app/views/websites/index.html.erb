@@ -19,3 +19,9 @@
 	<%= website.url %>
 </ul>
 <% end %>
+	
+	<% @tags.each do |tag| %>
+<ul>
+	<%= tag.title %>
+</ul>
+<% end %>

@@ -4,6 +4,7 @@ class WebsitesController < ApplicationController
   
   def index
     @websites = Website.search(params[:search])
+    @tags = Tag.all
   end
 
   def admin

@@ -4,6 +4,5 @@ Rails.application.routes.draw do
   
   get "websites/admin", to: "websites#admin"
   resources :websites
-  get "tags/new", to: "tags#new", as: "new_tag"
-  post "tags/new", to: "tags#create"
+  resources :tags
 end
